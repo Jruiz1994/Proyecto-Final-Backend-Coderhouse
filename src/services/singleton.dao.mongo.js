@@ -2,8 +2,6 @@ import logger from '../utils/logger.util.js'
 
 class SingletonDaoMongo {
     constructor(model) {
-        console.log(model);
-
         this.model = model;
         if (SingletonDaoMongo.instance) return SingletonDaoMongo.instance
     }

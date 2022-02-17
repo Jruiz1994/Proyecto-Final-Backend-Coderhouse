@@ -27,5 +27,4 @@ app.use('/api', apiRouter)
 
 app.use('/uploads', express.static('public'))
 
-
 export default app

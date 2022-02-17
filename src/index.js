@@ -18,8 +18,6 @@ import os from 'os';
 const ncpus = os.cpus().length;
 
 const { modo } = minimist(process.argv.slice(2), options);
-logger.info(process.argv.slice(2));
-logger.info("modo", modo);
 
 if (modo == 'cluster' && cluster.isPrimary) { //si el proceso es primary (antes se llamaba master), que genere un worker por cada nucleo para balancear la carga
     logger.info(`master pid ${process.pid}`);
