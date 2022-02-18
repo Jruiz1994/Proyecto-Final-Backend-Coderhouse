@@ -5,6 +5,7 @@ import logger from './utils/logger.util.js'
 // Server y minimist
 import minimist from 'minimist';
 import cluster from 'cluster';
+import { type } from './utils/minimist.util.js';
 
 const port = config.PORT
 const options = {
@@ -33,4 +34,13 @@ if (modo == 'cluster' && cluster.isPrimary) { //si el proceso es primary (antes 
 } else {
     const server = app.listen(port, () => logger.info(`Server en http://localhost:${port} / pid: ${process.pid}`));
     server.on('error', err => logger.error(err))
+}
+
+export const serverData = {
+    modo: modo,
+    port: port,
+    pid: process.pid,
+    mongoURI: config.MONGOURI,
+    expiracionLogin: config.EXPIRE,
+    persistencia: type
 }

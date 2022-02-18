@@ -7,6 +7,7 @@ La api cuenta con módulos que se pueden consumir mediante postman. No hay un fr
 - Carts: gestiona los carritos que los usuarios dan de alta/modifican/eliminan
 - Products: gestiona a los productos
 - Messages: gestiona los mensajes que el usuario comparte de forma pública(chat general) o privada(solo con el admin)
+- Server: muestra información del servidor
 
 #### AUTH: ####
 - POST localhost:8080/api/user/signup
@@ -111,3 +112,7 @@ Requiere que haya un usuario logueado. Lleva un body con type y messageText. Eje
     "type": string,
     "messageText": string
 }
+
+#### SERVER: ####
+- GET localhost:8080/api/server
+Muestra modo (fork o cluster), puerto, PID, mongoURI, tiempo de expiración del login y modo de persistencia
