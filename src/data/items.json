@@ -1,40 +1,37 @@
-[
-  {
-    "_id": "61cdfd93e12069c6c73d2e77",
-    "title": "Aperol editado",
-    "description": "Ron Bacardi 1L",
-    "code": "GIA492",
-    "price": 585,
-    "stock": 10,
-    "thumbnail": "https://tito.uy/wp-content/uploads/Cerveza-Corona-335-1.jpg",
-    "__v": 0
-  },
-  {
-    "_id": "61e726f16a1e05248d6ef0e4",
-    "title": "Fernet BrancaNEW",
-    "description": "Fernet Branca de menta 750mL",
-    "code": "FBM750",
-    "price": 580,
-    "stock": 2,
-    "thumbnail": "https://encrypted-tbn0.gstatic.com/imagesq=tbn:ANd9GcQBvDP44ImTWP4ILqGbqk5LD6LVMu3CYnSthglXMrjXSy-iFvBnSoUPfu7gG4-WFaS3NWI&usqp=CAU",
-    "__v": 0
-  },
-  {
-    "title": "Fernet BrancaNuevooo",
-    "description": "Fernet Branca de menta 750mL",
-    "code": "FBM750",
-    "price": "580",
-    "stock": 2,
-    "thumbnail": "https://encrypted-tbn0.gstatic.com/imagesq=tbn:ANd9GcQBvDP44ImTWP4ILqGbqk5LD6LVMu3CYnSthglXMrjXSy-iFvBnSoUPfu7gG4-WFaS3NWI&usqp=CAU",
-    "_id": "61e726f16a1e05248d6ef0e41"
-  },
-  {
-    "title": "Fernet Brancav3.0",
-    "description": "Fernet Branca de menta 750mL",
-    "code": "FBM750",
-    "price": "580",
-    "stock": 2,
-    "thumbnail": "https://encrypted-tbn0.gstatic.com/imagesq=tbn:ANd9GcQBvDP44ImTWP4ILqGbqk5LD6LVMu3CYnSthglXMrjXSy-iFvBnSoUPfu7gG4-WFaS3NWI&usqp=CAU",
-    "_id": "61e726f16a1e05248d6ef0e4111"
-  }
+[{
+        "title": "Ron Bacardi",
+        "description": "Ron Bacardi 1L",
+        "code": "RDB492",
+        "price": 585,
+        "stock": 10,
+        "thumbnail": "https://geant.vteximg.com.br/arquivos/ids/283873-700-700/542863.jpg?v=637673951513800000",
+        "category": "ron"
+    },
+    {
+        "title": "Fernet Branca",
+        "description": "Fernet Branca 750mL",
+        "code": "FBC750",
+        "price": 560,
+        "stock": 27,
+        "thumbnail": "https://geant.vteximg.com.br/arquivos/ids/250853-700-700/541240.jpg?v=637260236555230000",
+        "category": "fernet"
+    },
+    {
+        "title": "Fernet Branca de menta",
+        "description": "Fernet Branca de menta 750mL",
+        "code": "FBM750",
+        "price": 560,
+        "stock": 12,
+        "thumbnail": "https://geant.vteximg.com.br/arquivos/ids/207676-1000-1000/540024.jpg?v=636421081159800000",
+        "category": "fernet"
+    },
+    {
+        "title": "Martini Bianco",
+        "description": "Vermouth Martini Bianco 1L",
+        "code": "VMB280",
+        "price": 370,
+        "stock": 22,
+        "thumbnail": "https://www.distribuidorabebidas.com.uy/wp-content/uploads/sites/31/2018/01/botella_aperitivo_martini_biando_750cc.jpg",
+        "category": "aperitivos"
+    }
 ]

@@ -1,0 +1,578 @@
+{
+	"info": {
+		"_postman_id": "69f0a635-4ebc-4abc-8fb6-94beee15fec2",
+		"name": "PF coder",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User auth",
+			"item": [
+				{
+					"name": "post signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "jenn38",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Fernet28",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Jenn",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "Soriano 1271",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "jennifer.ruiz1871+test38@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "telephone",
+									"value": "+59891752871",
+									"type": "text"
+								},
+								{
+									"key": "age",
+									"value": "28",
+									"type": "text"
+								},
+								{
+									"key": "photo",
+									"type": "file",
+									"src": "/C:/Users/jenni/Desktop/Fotos para testing/cafe.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8080/api/user/signup",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"jenn37\",\r\n  \"password\": \"Fernet28\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/user/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/user/logout",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get image",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/user/image",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"image"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get userData",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/user/user",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "get all products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/products",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get product by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/products/61f472da89baac4b1322b501",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"products",
+								"61f472da89baac4b1322b501"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get products by category",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/products/cat/vinos",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"products",
+								"cat",
+								"vinos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "admin",
+								"value": "true",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Martini Bianco\",\r\n    \"description\": \"Martini Bianco 1L\",\r\n    \"code\": \"VMB100\",\r\n    \"price\": \"360\",\r\n    \"stock\": 27,\r\n    \"thumbnail\": \"https://encrypted-tbn0.gstatic.com/imagesq=tbn:ANd9GcQBvDP44ImTWP4ILqGbqk5LD6LVMu3CYnSthglXMrjXSy-iFvBnSoUPfu7gG4-WFaS3NWI&usqp=CAU\",\r\n    \"category\": \"vinos\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/products",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete product",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "admin",
+								"value": "true",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/api/products/61ec368f6296b562b265fdea",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"products",
+								"61ec368f6296b562b265fdea"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "put product",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "admin",
+								"value": "true",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \"title\": \"Fernet editado\",\r\n    \"description\": \"Fernet 1L\",\r\n    \"code\": \"GIA492\",\r\n    \"price\": 585,\r\n    \"stock\": 10,\r\n    \"thumbnail\": \"https://tito.uy/wp-content/uploads/Cerveza-Corona-335-1.jpg\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/products/61ec366248773e3fe636bbd2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"products",
+								"61ec366248773e3fe636bbd2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Carts",
+			"item": [
+				{
+					"name": "get all carts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/carts/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"carts",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get products from a cart",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/carts/61f3c753a19113ddb7bd50d6/productos",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"carts",
+								"61f3c753a19113ddb7bd50d6",
+								"productos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post cart",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/carts",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"carts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post product into cart",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/carts/61f46fe400ea79966b88e529/productos/61ec355281aa62ce0eda4c71",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"carts",
+								"61f46fe400ea79966b88e529",
+								"productos",
+								"61ec355281aa62ce0eda4c71"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete product from cart by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/carts/61f3c753a19113ddb7bd50d6/productos/61ec355281aa62ce0eda4c71",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"carts",
+								"61f3c753a19113ddb7bd50d6",
+								"productos",
+								"61ec355281aa62ce0eda4c71"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete cart",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/carts/61f308dc673c7bdd1e3f0ae0",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"carts",
+								"61f308dc673c7bdd1e3f0ae0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post buy cart",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/carts/61d756869c0920480ac08b1a",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"carts",
+								"61d756869c0920480ac08b1a"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Messages",
+			"item": [
+				{
+					"name": "get all messages",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/messages",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"messages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get messages by email",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/messages/user/jennifer.ruiz1871+test35@gmail.com",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"messages",
+								"user",
+								"jennifer.ruiz1871+test35@gmail.com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post message",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"public\",\r\n    \"messageText\": \"esta es una prueba publica con otro usuario\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/messages",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"messages"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
