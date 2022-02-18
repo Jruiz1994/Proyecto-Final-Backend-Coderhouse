@@ -1,6 +1,9 @@
 ## PROYECTO FINAL CURSO DE BACKEND - CODERHOUSE ##
 
 La api cuenta con módulos que se pueden consumir mediante postman. No hay un frontend desarrollado.
+Una consideración importante es que se implementó la persistencia en mongodb completamente, y file system solo para productos.
+Los errores de tipo warn y error se loguean en consola y se escriben en un archivo errores.log
+Se implementó login por passport-local.
 
 ### Módulos: ###
 - Auth: gestiona a los usuarios con sus sesiones
@@ -116,3 +119,4 @@ Requiere que haya un usuario logueado. Lleva un body con type y messageText. Eje
 #### SERVER: ####
 - GET localhost:8080/api/server
 Muestra modo (fork o cluster), puerto, PID, mongoURI, tiempo de expiración del login y modo de persistencia
+

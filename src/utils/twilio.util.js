@@ -10,9 +10,6 @@ export async function sendWhatsapp(to, content) {
             body: `${content}`,
             from: config.telFrom,
             to: `whatsapp:${to}`,
-            // mediaUrl: [
-            //     "url de la foto",
-            // ],
         };
         const response = await client.messages.create(message);
         return response
