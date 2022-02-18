@@ -39,4 +39,75 @@ Requiere que haya un usuario logueado para obtener la imagen del mismo
 Requiere que haya un usuario logueado para obtener toda la información del mismo
 
 
-PRODUCTS
+#### PRODUCTS: ####
+- GET localhost:8080/api/products
+No lleva body, trae todos los productos
+
+- GET localhost:8080/api/products/:id
+Luego del último slash se pasa el id del producto a consultar
+
+- GET localhost:8080/api/products/cat/:categoria
+Luego del último slash se pasa la categoría a consultar
+
+- POST localhost:8080/api/products
+Lleva un body con title, description, code, price, stock, thumbnail y category. Ejemplo con tipos de dato esperados:
+{
+    "title": string,
+    "description": string,
+    "code": string,
+    "price": number,
+    "stock": number,
+    "thumbnail": string,
+    "category": string
+}
+
+- DELETE localhost:8080/api/products/:id
+Luego del último slash se pasa el id del producto a eliminar
+
+- PUT localhost:8080/api/products/:id
+leva un body con title, description, code, price, stock, thumbnail y category. Ejemplo con tipos de dato esperados:
+{
+    "title": string,
+    "description": string,
+    "code": string,
+    "price": number,
+    "stock": number,
+    "thumbnail": string,
+    "category": string
+}
+
+#### CARTS: ####
+- GET localhost:8080/api/carts/
+No lleva body, trae todos los carritos
+
+- GET localhost:8080/api/carts/:cartId/productos
+Lleva el id del carrito a consultar
+
+- POST localhost:8080/api/carts
+Crea un carrito, si hay usuario logueado lo asocia al usuario, pero si no hay usuario logueado avisa
+
+- POST localhost:8080/api/carts/:idCart/productos/:idProduct
+Agrega un producto con determinado id al carrito con el id indicado
+
+- POST localhost:8080/api/carts/:idCart
+Agrega el campo "comprado" con valor true al carrito con id dado
+
+- DELETE localhost:8080/api/carts/:idCart/productos/:idProduct
+Elimina un producto con determinado id del carrito con id dado
+
+- DELETE localhost:8080/api/carts/:idCart
+Elimina el carrito por id
+
+#### MESSAGES: ####
+- GET localhost:8080/api/messages
+Obtiene todos los mensajes con atributo type = public de todos los usuarios
+
+- GET localhost:8080/api/messages/user/:userEmail
+Obtiene todos los mensajes con atributo type = private del usuario con email dado
+
+- POST localhost:8080/api/messages
+Requiere que haya un usuario logueado. Lleva un body con type y messageText. Ejemplo con tipos de dato esperados:
+{
+    "type": string,
+    "messageText": string
+}

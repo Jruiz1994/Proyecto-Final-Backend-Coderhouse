@@ -11,7 +11,7 @@ class MessagesService extends Services {
 
     async getByEmail(userEmail) {
         try {
-            const respuesta = await this.model.find({ userEmail: userEmail })
+            const respuesta = await this.model.find({ userEmail: userEmail, type: 'private' })
             return respuesta
         } catch (error) {
             logger.error(error);
